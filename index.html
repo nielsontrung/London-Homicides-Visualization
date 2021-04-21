@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <title>Let's make a map with D3.js!</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <script src="https://kit.fontawesome.com/5d0a5175e2.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/d3@5.6.0/dist/d3.min.js"></script>
+  <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
+  <script src="https://d3js.org/d3-array.v1.min.js"></script>
+  <script src="https://d3js.org/d3-geo.v1.min.js"></script>
+  <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+</head>
+<body>
+<div class="transbox">
+  <div class = "notTrans">
+  <h1 style="text-align: center;">London Homicides Visualisation</h1>
+  <ul style="text-align: center;">
+      <li>Slider to change the year filter for the data</li>
+      <li>Hover over map for borough name and dead count</li>
+      <li>Hover over icons for more details on homicide</li>
+      <li>Hover over bar chart to highlight positions on map</li>
+      <li>Click bar chart to filter out data</li>
+      <li>Double click bar chart to reset</li>
+  </ul>
+  <div class="slidecontainer" style="text-align: center;">
+      <p>Year: <span id="demo">2012</span></p>
+      <input type="range" min="2012" max="2018" value="1" class="slider" id="myRange" list="ticks" onchange="slider(this)">
+      <datalist id="ticks">
+          <option value="2012">2012</option>
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+      </datalist>
+  </div></div>
+  </div>
+  <svg id="container" width="100%" height="900"></svg>
+  <script src="script.js"></script>
+  <svg class="chart" id="barChart" width="800" height="400">
+    <rect class="bg"></rect>
+  </svg>
+  <script>
+    barsplot();
+  </script>
+</body>
+</html>

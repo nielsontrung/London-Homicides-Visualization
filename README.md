@@ -9,6 +9,10 @@ We implemented a map visualization to visualize the data in a meaningful way thr
 - [Evaluation](evaluation)
 - [Authors](authors)
 
+## Live Demo
+Try the live demo by clicking the link below!
+- https://nadramon.github.io/pages/583Final/
+
 ## Investigation
 First we had to discover what dataset we were going to visualize.
 We went on various websites such as kaggle.com, statista.com and Google.
